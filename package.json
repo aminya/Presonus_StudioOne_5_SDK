@@ -1,0 +1,20 @@
+{
+  "name": "presonus_studioone_5_sdk",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "PreSonus StudioOne 5 SDK",
+  "author": "PreSonus",
+  "keywords": [
+    "presonus",
+    "studioone",
+    "sdk"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.10",
+    "typescript": "^5"
+  }
+}
