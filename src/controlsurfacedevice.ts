@@ -13,6 +13,7 @@ import { SysexBuffer } from "./midiprotocol";
 export interface HostDevice {
     updateValue: (handlerIndex: number, value: any) => void;
     invalidate: (handlerIndex: number) => void;
+    invalidateAll: () => void;
     addHandler: (name: string, handler: ControlHandler) => number;
     sendMidiEvent: (status: number, data1: number, data2: number) => void;
     sendSysexEvent: (data: Uint8Array, length: number) => void;
