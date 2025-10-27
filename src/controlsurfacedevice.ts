@@ -8,13 +8,7 @@
 //
 //************************************************************************************************
 
-class SysexBuffer {
-    data: Uint8Array;
-    length: number;
-    constructor() {
-        this.data = new Uint8Array(512);
-    }
-}
+import { SysexBuffer } from "./midiprotocol";
 
 export interface HostDevice {
     updateValue: (handlerIndex: number, value: any) => void;
