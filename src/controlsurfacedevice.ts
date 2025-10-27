@@ -106,7 +106,7 @@ class ControlHandler {
      * @param data  SysEx message buffer.
      * @param length  Message buffer length.
      */
-    receiveSysex(data: SysexBuffer, length: number) {
+    receiveSysex(data: Uint8Array, length: number) {
         return false;
     }
     /** Get preallocated buffer for sending SysEx. */
@@ -193,7 +193,7 @@ class ControlSurfaceDevice {
      * @param data  SysEx message buffer.
      * @param length  Message buffer length.
      */
-    onSysexEvent(data: SysexBuffer, length: number) {
+    onSysexEvent(data: Uint8Array, length: number) {
         for (const i in this.receiveHandlers) {
             const handler = this.receiveHandlers[i];
             if (handler?.receiveSysex(data, length))
